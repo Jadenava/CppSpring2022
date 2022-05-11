@@ -1,0 +1,77 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    
+    int firstNum, secondNum, numCheck, sum, c;
+    
+    // Part 1a
+    cout << "Please enter two integers while having the first "
+    << "integer smaller than the second integer" << endl;
+    cin >> firstNum >> secondNum;
+   
+    // Part 1b
+    while (firstNum > secondNum) {
+      cout << "The first integer must be smaller than the second. "
+      << "Please try again." << endl;
+      cin >> firstNum >> secondNum;
+    } cout << "\n" << endl;
+    
+    // Part 2
+    for (numCheck = firstNum; numCheck <= secondNum; numCheck++) {
+      if (numCheck % 2 != 0) {
+        cout << numCheck << " ";
+      }
+      else {
+        numCheck;
+        continue;
+      }
+    } cout << "\n" << endl;
+
+     //Part 3 original
+    numCheck = firstNum;
+    sum = 0;
+    while (numCheck <= secondNum) {
+      if (!(numCheck % 2))
+        sum += numCheck++;
+      else {
+        numCheck++;
+        continue;
+      }
+    }
+    cout << "The sum of all even numbers between " << firstNum
+    << " and " << secondNum << " are: " << sum << "\n" << endl;
+
+    // Part 4
+    numCheck = 1;
+    while (numCheck <= 10){
+      cout << numCheck << " " << numCheck * numCheck << endl;
+      numCheck++;
+    }
+    cout << "\n" << endl;
+
+    // Part 5
+    numCheck = firstNum;
+    sum = 0;
+    while (numCheck <= secondNum){
+      if (numCheck%2){
+        sum+= (numCheck*numCheck);
+        numCheck++;
+      } else {
+        numCheck++;
+        continue;
+      }
+    }
+    cout << "The sum of all odd numbers squared between "
+    << firstNum << " and " << secondNum << " is: " << sum << "\n\n" << endl;
+
+    // ASCII value of upper case letters is from 65-90 inclusive
+    c = 65;
+    while (c < 91) {
+      cout << char(c++) << " ";
+    }
+
+
+    return 0;
+}
